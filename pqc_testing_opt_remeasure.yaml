@@ -323,8 +323,6 @@ contacts:
               - type: gcd
                 parameters:
                   maxreldev: 0.2
-                limits:
-                  i_surf: {minimum: -300e-12, maximum: 300e-12}
       - name: Polysilicon meander
         type: iv_ramp_elm
         parameters:
@@ -651,8 +649,6 @@ contacts:
               - type: gcd
                 parameters:
                   maxreldev: 0.2
-                limits:
-                  i_surf: {minimum: -300e-12, maximum: 300e-12}
       - name: N+ CBKRblow
         type: iv_ramp_4_wire
         parameters:
