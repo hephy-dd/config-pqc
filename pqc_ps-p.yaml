@@ -1,6 +1,6 @@
-id: testing_rem
-name: PQC Optimized and with Remeasurement
-description: Used for testing purpose!
+id: pqc_psp
+name: PQC for PS-P
+description: Used for PS-P halfmoons
 contacts:
   - name: PQC Flute 1
     contact_id: flute_1
