@@ -198,7 +198,7 @@ contacts:
             waiting_time: 400 ms
             bias_voltage: -5 V
             hvsrc_current_compliance: 10 uA
-            vsrc_current_compliance: 200 uA
+            vsrc_current_compliance: 500 uA
             elm_current_range: 2 nA
             elm_filter_enable: true
             elm_filter_count: 5
