@@ -7,9 +7,9 @@ contacts:
     measurements:
       - name: MOS capacitor (HV Source)
         type: cv_ramp
+        enabled: false
         description: Variant using HVSource and LCR
         parameters:
-            matrix_enable: true
             matrix_channels: [1A01, 1B02, 3H05]
             bias_voltage_start: -3 V
             bias_voltage_stop: 8 V
@@ -36,7 +36,6 @@ contacts:
         type: iv_ramp_bias_elm
         enabled: false
         parameters:
-            matrix_enable: true
             matrix_channels: [1A07, 1C08, 1D02, 2G09]
             voltage_start: -14 V
             voltage_stop: 4 V
@@ -59,8 +58,7 @@ contacts:
         type: iv_ramp_4_wire
         enabled: false
         parameters:
-            matrix_enable: true
-            matrix_channels: [1D07, 1G08, 2E09, 2F08]
+            matrix_channels: [3D03, 3G02, 3E04, 3F05]
             current_start: -1 mA
             current_stop: 1 mA
             current_step: 200 uA
@@ -70,15 +68,11 @@ contacts:
             vsrc_sense_mode: remote
             analysis_functions:
               - type: van_der_pauw
-                limits:
-                  r_sheet: {minimum: 25, maximum: 50}
-                  r_value: {minimum: 0.9, maximum: 1.1}
       - name: Reverse N+ Van-der-Pauw cross
         type: iv_ramp_4_wire
         enabled: false
         parameters:
-            matrix_enable: true
-            matrix_channels: [1D08, 1E07, 2F09, 2G08]
+            matrix_channels: [3D02, 3G05, 3E05, 3F04]
             current_start: -1 mA
             current_stop: 1 mA
             current_step: 200 uA
@@ -88,30 +82,12 @@ contacts:
             vsrc_sense_mode: remote
             analysis_functions:
               - type: van_der_pauw
-                limits:
-                  r_sheet: {minimum: 25, maximum: 50}
-                  r_value: {minimum: 0.9, maximum: 1.1}
-                  
-      - name: P-stop Van-der-Pauw blow
-        type: iv_ramp_4_wire
-        enabled: false
-        parameters:
-            matrix_enable: true
-            matrix_channels: [1E09, 1F10, 2D07, 2G06]
-            current_start: -1 uA
-            current_stop: 1 uA
-            current_step: 500 nA
-            waiting_time: 100 ms
-            waiting_time_start: 5 s
-            vsrc_voltage_compliance: 20 V
-            vsrc_sense_mode: remote
-            analysis_functions: [van_der_pauw]
+  
       - name: P-stop Van-der-Pauw cross
         type: iv_ramp_4_wire
         enabled: false
         parameters:
-            matrix_enable: true
-            matrix_channels: [1D09, 1G10, 2E07, 2F06]
+            matrix_channels: [3D03, 3G02, 3E04, 3F05]
             current_start: -1 uA
             current_stop: 1 uA
             current_step: 200 nA
@@ -121,15 +97,11 @@ contacts:
             vsrc_sense_mode: remote
             analysis_functions:
               - type: van_der_pauw
-                limits:
-                  r_sheet: {minimum: 15000, maximum: 25000}
-                  r_value: {minimum: 0.9, maximum: 1.1}
       - name: Reverse P-stop Van-der-Pauw cross
         type: iv_ramp_4_wire
         enabled: false
         parameters:
-            matrix_enable: true
-            matrix_channels: [1D10, 1E09, 2F07, 2G06]
+            matrix_channels: [3D02, 3G05, 3E05, 3F04]
             current_start: -1 uA
             current_stop: 1 uA
             current_step: 200 nA
@@ -139,9 +111,31 @@ contacts:
             vsrc_sense_mode: remote
             analysis_functions:
               - type: van_der_pauw
-                limits:
-                  r_sheet: {minimum: 15000, maximum: 25000}
-                  r_value: {minimum: 0.9, maximum: 1.1}
+                  
+      - name: Bulk cross
+        type: iv_ramp_4_wire
+        parameters:
+            matrix_channels: [3D03, 3G02, 3E04, 3F05]
+            current_start: 0 nA
+            current_stop: 500 nA
+            current_step: 25 nA
+            waiting_time: 100 ms
+            vsrc_voltage_compliance: 20 V
+            vsrc_sense_mode: remote
+            analysis_functions:
+              - type: van_der_pauw
+      - name: Reverse bulk cross
+        type: iv_ramp_4_wire
+        parameters:
+            matrix_channels: [3D02, 3G05, 3E05, 3F04]
+            current_start: 0 nA
+            current_stop: 500 nA
+            current_step: 25 nA
+            waiting_time: 100 ms
+            vsrc_voltage_compliance: 20 V
+            vsrc_sense_mode: remote
+            analysis_functions:
+              - type: van_der_pauw
   - name: PQC Flute 2
     contact_id: flute_2
     enabled: false
@@ -247,49 +241,6 @@ contacts:
               - type: van_der_pauw
                 limits:
                   r_sheet: {minimum: 0.015, maximum: 0.040}
-
-      - name: Bulk blow
-        type: iv_ramp_4_wire
-        parameters:
-            matrix_enable: true
-            matrix_channels: [1E04, 2D12, 2G11, 1F05]
-            current_start: 0 nA
-            current_stop: 500 nA
-            current_step: 100 nA
-            waiting_time: 100 ms
-            vsrc_voltage_compliance: 20 V
-            vsrc_sense_mode: remote
-            analysis_functions: [van_der_pauw]
-      - name: Bulk cross
-        type: iv_ramp_4_wire
-        parameters:
-            matrix_enable: true
-            matrix_channels: [1D04, 2E12, 2F11, 1G05]
-            current_start: 0 nA
-            current_stop: 500 nA
-            current_step: 25 nA
-            waiting_time: 100 ms
-            vsrc_voltage_compliance: 20 V
-            vsrc_sense_mode: remote
-            analysis_functions:
-              - type: van_der_pauw
-                limits:
-                  r_sheet: {minimum: 30000, maximum: 80000}
-      - name: Reverse bulk cross
-        type: iv_ramp_4_wire
-        parameters:
-            matrix_enable: true
-            matrix_channels: [1D05, 1E04, 2F12, 2G11]
-            current_start: 0 nA
-            current_stop: 500 nA
-            current_step: 25 nA
-            waiting_time: 100 ms
-            vsrc_voltage_compliance: 20 V
-            vsrc_sense_mode: remote
-            analysis_functions:
-              - type: van_der_pauw
-                limits:
-                  r_sheet: {minimum: 30000, maximum: 80000}
   - name: PQC Flute 4
     contact_id: flute_4
     enabled: false
