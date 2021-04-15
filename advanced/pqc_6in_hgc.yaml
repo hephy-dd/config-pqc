@@ -244,6 +244,7 @@ contacts:
   - name: PQC Flute 4
     contact_id: flute_4
     enabled: false
+    measurements:
       - name: N+ CBKR
         type: iv_ramp_4_wire
         parameters:
