@@ -363,8 +363,8 @@ contacts:
         parameters:
             matrix_enable: true
             matrix_channels: [1E07, 1F08, 2D09, 2G08]
-            current_start: -30 mA
-            current_stop: 30 mA
+            current_start: -100 mA
+            current_stop: 100 mA
             current_step: 10 mA
             waiting_time: 200 ms
             vsrc_voltage_compliance: 20 V
@@ -375,8 +375,8 @@ contacts:
         parameters:
             matrix_enable: true
             matrix_channels: [1D07, 1G08, 2E09, 2F08]
-            current_start: -30 mA
-            current_stop: 30 mA
+            current_start: -100 mA
+            current_stop: 100 mA
             current_step: 1 mA
             waiting_time: 100 ms
             vsrc_voltage_compliance: 20 V
@@ -390,8 +390,8 @@ contacts:
         parameters:
             matrix_enable: true
             matrix_channels: [1D08, 1E07, 2F09, 2G08]
-            current_start: -30 mA
-            current_stop: 30 mA
+            current_start: -100 mA
+            current_stop: 100 mA
             current_step: 1 mA
             waiting_time: 100 ms
             vsrc_voltage_compliance: 20 V
