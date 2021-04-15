@@ -302,8 +302,8 @@ contacts:
     measurements:
       - name: Diode IV
         type: iv_ramp_elm
+        enabled: false
         parameters:
-            matrix_enable: true
             matrix_channels: [1A02, 2C10, 1G06]
             voltage_start: 0 V
             voltage_stop: -1000 V
@@ -326,6 +326,7 @@ contacts:
             analysis_functions: [iv]
       - name: Diode CV
         type: cv_ramp
+        enabled: false
         parameters:
             matrix_enable: true
             matrix_channels: [1A01, 1B02, 2H10, 1G06]
