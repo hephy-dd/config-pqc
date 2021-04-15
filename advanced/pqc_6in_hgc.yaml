@@ -72,7 +72,7 @@ contacts:
         type: iv_ramp_4_wire
         enabled: false
         parameters:
-            matrix_channels: [3D02, 3G05, 3E05, 3F04]
+            matrix_channels: [3D02, 3G05, 3E03, 3F04]
             current_start: -1 mA
             current_stop: 1 mA
             current_step: 200 uA
@@ -101,7 +101,7 @@ contacts:
         type: iv_ramp_4_wire
         enabled: false
         parameters:
-            matrix_channels: [3D02, 3G05, 3E05, 3F04]
+            matrix_channels: [3D02, 3G05, 3E03, 3F04]
             current_start: -1 uA
             current_stop: 1 uA
             current_step: 200 nA
@@ -127,7 +127,7 @@ contacts:
       - name: Reverse bulk cross
         type: iv_ramp_4_wire
         parameters:
-            matrix_channels: [3D02, 3G05, 3E05, 3F04]
+            matrix_channels: [3D02, 3G05, 3E03, 3F04]
             current_start: 0 nA
             current_stop: 500 nA
             current_step: 25 nA
