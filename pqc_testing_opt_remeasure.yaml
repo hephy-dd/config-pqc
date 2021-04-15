@@ -418,14 +418,13 @@ contacts:
         type: iv_ramp_elm
         enabled: true
         parameters:
-            matrix_enable: true
             matrix_channels: [2A04, 1C11]
             voltage_start: 150 V
-            waiting_time_start: 2 s
+            waiting_time_start: 5 s
             voltage_stop: 200 V
             voltage_step: 1 V
-            waiting_time_before: 500ms
-            waiting_time: 300 ms
+            waiting_time_before: 1 s
+            waiting_time: 1 s
             hvsrc_current_compliance: 100 nA
             hvsrc_sense_mode: local
             hvsrc_accept_compliance: true
