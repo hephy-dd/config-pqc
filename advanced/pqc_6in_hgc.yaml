@@ -244,18 +244,6 @@ contacts:
   - name: PQC Flute 4
     contact_id: flute_4
     enabled: false
-    
-        type: iv_ramp_4_wire
-        parameters:
-            matrix_enable: true
-            matrix_channels: [1E05, 1D04, 2G11, 2F10]
-            current_start: -100 uA
-            current_stop: 100 uA
-            current_step: 50 uA
-            waiting_time: 100 ms
-            vsrc_voltage_compliance: 20 V
-            vsrc_sense_mode: remote
-            analysis_functions: [cbkr]
       - name: N+ CBKR
         type: iv_ramp_4_wire
         parameters:
