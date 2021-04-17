@@ -419,12 +419,12 @@ contacts:
         enabled: true
         parameters:
             matrix_channels: [2A04, 1C11]
-            voltage_start: 150 V
+            voltage_start: 100 V
             waiting_time_start: 5 s
             voltage_stop: 200 V
-            voltage_step: 1 V
-            waiting_time_before: 1 s
-            waiting_time: 1 s
+            voltage_step: 5 V
+            waiting_time_before: 2 s
+            waiting_time: 2 s
             hvsrc_current_compliance: 100 nA
             hvsrc_sense_mode: local
             hvsrc_accept_compliance: true
