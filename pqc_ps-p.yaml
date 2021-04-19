@@ -60,8 +60,8 @@ contacts:
         description: Variant using HVSource and LCR
         parameters:
             matrix_channels: [1A01, 1B04, 2H12]
-            bias_voltage_start: -3 V
-            bias_voltage_stop: 3 V
+            bias_voltage_start: -2 V
+            bias_voltage_stop: 2 V
             bias_voltage_step: 0.5 V
             waiting_time: 100 ms
             hvsrc_current_compliance: 100 uA
@@ -83,8 +83,8 @@ contacts:
         description: Variant using HVSource and LCR
         parameters:
             matrix_channels: [1A01, 1B04, 3H01]
-            bias_voltage_start: -3 V
-            bias_voltage_stop: 3 V
+            bias_voltage_start: -2 V
+            bias_voltage_stop: 2 V
             bias_voltage_step: 0.5 V
             waiting_time: 100 ms
             hvsrc_current_compliance: 100 uA
@@ -96,7 +96,7 @@ contacts:
             lcr_averaging_rate: 2
             lcr_auto_level_control: false
             lcr_open_correction_mode: multi
-            lcr_open_correction_channel: 2
+            lcr_open_correction_channel: 3
             analysis_functions:
               - type: capacitor
                 limits:
