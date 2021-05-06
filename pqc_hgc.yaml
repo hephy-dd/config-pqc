@@ -283,8 +283,8 @@ contacts:
         type: iv_ramp_elm
         parameters:
             matrix_channels: [2A04, 1C11]
-            voltage_start: 100 V
-            waiting_time_start: 5 s
+            voltage_start: 0 V
+            waiting_time_start: 1 s
             voltage_stop: 200 V
             voltage_step: 5 V
             waiting_time_before: 2 s
@@ -380,7 +380,7 @@ contacts:
             matrix_channels: [1D07, 1G08, 2E09, 2F08]
             current_start: -200 mA
             current_stop: 200 mA
-            current_step: 1 mA
+            current_step: 10 mA
             waiting_time: 100 ms
             vsrc_voltage_compliance: 20 V
             vsrc_sense_mode: remote
@@ -396,7 +396,7 @@ contacts:
             matrix_channels: [1D08, 1E07, 2F09, 2G08]
             current_start: -200 mA
             current_stop: 200 mA
-            current_step: 1 mA
+            current_step: 10 mA
             waiting_time: 100 ms
             vsrc_voltage_compliance: 20 V
             vsrc_sense_mode: remote
