@@ -58,7 +58,6 @@ contacts:
       - name: Capacitor test structure Right 10kHz 250mV (HV Source)
         type: cv_ramp
         description: Variant using HVSource and LCR
-        enabled: false
         parameters:
             matrix_channels: [1A01, 1B04, 2H12]
             bias_voltage_start: -2 V
@@ -81,7 +80,6 @@ contacts:
                   c_mean: {minimum: 1.5e-12, maximum: 4e-12}
       - name: Capacitor test structure Left 10kHz 250mV (HV Source)
         type: cv_ramp
-        enabled: false
         description: Variant using HVSource and LCR
         parameters:
             matrix_channels: [1A01, 1B04, 3H01]
@@ -275,7 +273,6 @@ contacts:
                   r_value: {minimum: 0.98, maximum: 1.1}
   - name: PQC Flute 2
     contact_id: flute_2
-    enabled: false
     measurements:
       - name: GCD
         type: iv_ramp_bias_elm
@@ -416,7 +413,6 @@ contacts:
     measurements:
       - name: Diode IV
         type: iv_ramp_elm
-        enabled: false
         parameters:
             matrix_enable: true
             matrix_channels: [1A02, 2C10, 1G06]
@@ -441,7 +437,6 @@ contacts:
             analysis_functions: [iv]
       - name: Diode CV
         type: cv_ramp
-        enabled: false
         parameters:
             matrix_enable: true
             matrix_channels: [1A01, 1B02, 2H10, 1G06]
