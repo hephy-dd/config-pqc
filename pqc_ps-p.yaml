@@ -280,7 +280,7 @@ contacts:
         type: iv_ramp_elm
         parameters:
             matrix_channels: [2A04, 1C11]
-            voltage_start: 100 V
+            voltage_start: 0 V
             waiting_time_start: 5 s
             voltage_stop: 200 V
             voltage_step: 5 V
