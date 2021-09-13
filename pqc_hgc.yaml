@@ -329,7 +329,7 @@ contacts:
             analysis_functions: [iv]
       - name: Diode CV
         type: cv_ramp
-        enabled: false
+        enabled: true
         parameters:
             matrix_enable: true
             matrix_channels: [1A01, 1B02, 2H10, 1G06]
