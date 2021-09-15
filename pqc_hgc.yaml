@@ -304,7 +304,7 @@ contacts:
     measurements:
       - name: Diode IV
         type: iv_ramp_elm
-        enabled: false
+        enabled: true
         parameters:
             matrix_enable: true
             matrix_channels: [1A02, 2C10, 1G06]
