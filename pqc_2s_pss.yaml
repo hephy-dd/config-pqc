@@ -10,11 +10,11 @@ contacts:
         parameters:
             matrix_channels: [1D11, 2C05, 2A04]
             waiting_time_start: 1 s
-            voltage_start: 2 V
-            voltage_stop: 8 V
+            voltage_start: -2 V
+            voltage_stop: 6 V
             voltage_step: 0.1 V
-            voltage_step_before: 2 V
-            voltage_step_after: 2 V
+            voltage_step_before: 0 V
+            voltage_step_after: 0 V
             waiting_time: 300 ms
             bias_voltage: 100 mV
             hvsrc_current_compliance: 10 uA
@@ -26,7 +26,7 @@ contacts:
             analysis_functions:
               - type: fet
                 limits:
-                  v_th: {minimum: 2, maximum: 6}
+                  v_th: {minimum: -2, maximum: 6}
       - name: MOS capacitor (HV Source)
         type: cv_ramp
         description: Variant using HVSource and LCR
@@ -578,7 +578,7 @@ contacts:
             analysis_functions:
               - type: van_der_pauw
                 limits:
-                  r_sheet: {minimum: 30000, maximum: 80000}
+                  r_sheet: {minimum: 30000, maximum: 120000}
       - name: Reverse bulk cross
         type: iv_ramp_4_wire
         parameters:
@@ -593,7 +593,7 @@ contacts:
             analysis_functions:
               - type: van_der_pauw
                 limits:
-                  r_sheet: {minimum: 30000, maximum: 80000}
+                  r_sheet: {minimum: 30000, maximum: 120000}
   - name: PQC Flute 4
     contact_id: flute_4
     enabled: true

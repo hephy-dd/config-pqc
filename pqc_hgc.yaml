@@ -21,7 +21,7 @@ contacts:
             vsrc_current_compliance: 10 uA
             elm_filter_enable: true
             elm_filter_count: 3
-            elm_current_autorange_enable: false
+            elm_current_autorange_enable: true
             elm_current_range: 20 uA
             analysis_functions:
               - type: fet
