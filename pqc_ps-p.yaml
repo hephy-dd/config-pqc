@@ -514,7 +514,7 @@ contacts:
         type: iv_ramp_4_wire
         parameters:
             matrix_enable: true
-            matrix_channels: [1E05, 1D06, 2G11, 2F10]
+            matrix_channels: [1E05, 1D04, 2G11, 2F10]
             current_start: -100 uA
             current_stop: 100 uA
             current_step: 50 uA
@@ -526,7 +526,7 @@ contacts:
         type: iv_ramp_4_wire
         parameters:
             matrix_enable: true
-            matrix_channels: [1D05, 1E06, 2F11, 2G10]
+            matrix_channels: [1D05, 1E04, 2F11, 2G10]
             current_start: -100 uA
             current_stop: 100 uA
             current_step: 20 uA
