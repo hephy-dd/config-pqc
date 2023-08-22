@@ -697,8 +697,8 @@ contacts:
         parameters:
             matrix_enable: true
             matrix_channels: [1D04, 1E03, 1F12, 1G11]
-            current_start: -10 uA
-            current_stop: 10 uA
+            current_start: -40 uA
+            current_stop: -20 uA
             current_step: 1 uA
             waiting_time: 100 ms
             vsrc_voltage_compliance: 20 V
